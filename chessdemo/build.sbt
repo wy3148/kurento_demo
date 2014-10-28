@@ -12,3 +12,7 @@ libraryDependencies ++= Seq(
   cache,
   javaWs
 )
+
+libraryDependencies ++= Seq(
+  "org.kurento" % "kurento-client" % "5.0.3"
+)

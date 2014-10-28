@@ -25,12 +25,14 @@ import views.html.index;
 import akka.actor.ActorRef;
 import akka.actor.Cancellable;
 import akka.actor.Props;
+import play.mvc.Http.RequestBody;
+import java.io.IOException;
 
 import org.kurento.client.factory.KurentoClient;
 
 public class HelloWorldApp extends Controller {
 
-	public static Result startDemo(){
+	public static Result startDemo() throws IOException {
 		
 		HelloWorldAppInst demo_app = new HelloWorldAppInst();
 		
