@@ -16,3 +16,5 @@ libraryDependencies ++= Seq(
 libraryDependencies ++= Seq(
   "org.kurento" % "kurento-client" % "5.0.3"
 )
+
+libraryDependencies += "org.kurento" % "kurento-utils-js" % "5.0.3"

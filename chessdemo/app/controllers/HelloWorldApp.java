@@ -21,7 +21,7 @@ import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.WebSocket;
 import scala.concurrent.duration.Duration;
-import views.html.index;
+import views.html.*;
 import akka.actor.ActorRef;
 import akka.actor.Cancellable;
 import akka.actor.Props;
@@ -31,9 +31,15 @@ import java.io.IOException;
 import org.kurento.client.factory.KurentoClient;
 
 public class HelloWorldApp extends Controller {
+	
+	public static Result home(){
+		
+		return ok(views.html.index.render());
+	}
 
 	public static Result startDemo() throws IOException {
 		
+		System.out.println("get the startdemo");
 		HelloWorldAppInst demo_app = new HelloWorldAppInst();
 		
 		RequestBody body = request().body();
